@@ -7,6 +7,7 @@
     --bg-primary: #01A479;
     --bg-shade: #00AF86;
     --bg-secondary: #FFE763;
+    --bg-secondary-shade: #ffe863e9;
 
     --width: 36rem;
     --height: 26rem;
@@ -58,6 +59,13 @@ body {
     top: -40px;
 }
 
+.swap:after {
+    transform: rotate(90deg) !important;
+    left: 39px;
+    right: 0;
+    border-bottom: calc(var(--width)/2) solid var(--bg-primary) !important;
+}
+
 #title {
     display: flex;
     flex-direction: row;
@@ -100,12 +108,21 @@ form {
     border: 0;
     border-bottom: 1px solid var(--text-primary);
     margin-bottom: 1.5rem;
-    padding-left: 2rem;
+    padding-left: 1.5rem;
     padding-bottom: 0.5rem;
     color: var(--text-primary);
     font-size: 1rem;
     font-weight: 600;
 }
+
+#user-r, #pass-r {
+    border-bottom: 1px solid var(--bg);
+    color: var(--bg);
+    text-align: right; 
+    padding-left: 0;
+    padding-right: 1.5rem;
+}
+
 #submit {
     border: none;
     width: 14rem;
@@ -122,6 +139,22 @@ form {
     color: var(--bg);
 }
 
+#submit-r {
+    border: none;
+    width: 14rem;
+    background-color: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 4rem;
+    margin-top: 0.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
 form a {
     display: flex;
     position: absolute;
@@ -133,22 +166,48 @@ form a {
     font-size: 15px;
 }
 
+#a2 {
+    color: var(--bg);
+}
+
 #register {
     display: none !important;
 }
 
-::-webkit-input-placeholder { /* Edge */
+svg {
+    font-size: 16px !important;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    margin-left: 4rem;
+    margin-bottom: 0.90rem;
+}
+
+form svg:first-child {
+    margin-bottom: 9.15rem;
+}
+
+#register svg {
+    right: 0;
+}
+
+#login::-webkit-input-placeholder { /* Edge */
     color: var(--text-primary);
     font-size: 1rem;
 }
   
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: var(--text-primary);
-    font-size: 1rem;
-}
-  
-::placeholder {
+#login::placeholder {
     color: var(--text-primary);
     font-size: 1rem;
     font-weight: 600;
+}
+
+#register::placeholder {
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+}
+#register::-webkit-input-placeholder { /* Edge */
+    color: black;
+    font-size: 1rem;
 }
