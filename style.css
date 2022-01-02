@@ -61,7 +61,7 @@ body {
 
 .swap:after {
     transform: rotate(90deg) !important;
-    left: 39px;
+    left: 40px;
     right: 0;
     border-bottom: calc(var(--width)/2) solid var(--bg-primary) !important;
 }
@@ -191,23 +191,29 @@ form svg:first-child {
     right: 0;
 }
 
-#login::-webkit-input-placeholder { /* Edge */
+::-webkit-input-placeholder { /* Edge */
     color: var(--text-primary);
     font-size: 1rem;
 }
   
-#login::placeholder {
+::placeholder {
     color: var(--text-primary);
     font-size: 1rem;
     font-weight: 600;
 }
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--text-primary);
+}
 
-#register::placeholder {
-    color: black;
+#register ::placeholder {
+    color: rgba(24, 52, 66, 0.9);
     font-size: 1rem;
     font-weight: 600;
 }
-#register::-webkit-input-placeholder { /* Edge */
-    color: black;
+#register ::-webkit-input-placeholder { 
+    color: rgba(24, 52, 66, 0.9);
     font-size: 1rem;
+}
+#register :-ms-input-placeholder { 
+    color: rgba(24, 52, 66, 0.9);
 }
